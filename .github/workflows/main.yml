@@ -33,10 +33,10 @@ jobs:
           echo "[default]" > ~/.aws/config
           echo "aws_access_key_id = ${{ secrets.AWS_ACCESS_KEY_ID }}" >> ~/.aws/config
           echo "aws_secret_access_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> ~/.aws/config
-          echo "region = us-east-1" >> ~/.aws/config
+          echo "region = us-east-2" >> ~/.aws/config
 
       - name: aws s3 delete bucket archives x
-        run: aws s3 rm s3://clasebit --recursive
+        run: aws s3 rm s3://jesarrl-bucket --recursive
 
       - name: aws s3 upload archives
-        run: aws s3 cp ./dist/clasebit/browser s3://clasebit --recursive
+        run: aws s3 cp ./dist/btc-final/browser s3://jesarrl-bucket --recursive
