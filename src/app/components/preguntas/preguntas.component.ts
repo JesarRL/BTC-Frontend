@@ -9,5 +9,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './preguntas.component.css'
 })
 export class PreguntasComponent {
-
+    navigateToLink():void {
+        window.open("https://api.whatsapp.com/send/?phone=573114810880&text&type=phone_number&app_absent=0")
+    }
 }

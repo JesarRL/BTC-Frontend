@@ -28,3 +28,18 @@ input.inputNumber::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.imagenWsp{
+    height: 90px;
+    width: 90px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    margin: 0;
+}
+
+.imagenWsp:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.2s all;
+}
