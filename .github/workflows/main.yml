@@ -39,4 +39,4 @@ jobs:
         run: aws s3 rm s3://jesarrl-bucket --recursive
 
       - name: aws s3 upload archives
-        run: aws s3 cp ./dist/btc-final/browser s3://jesarrl-bucket --recursive
+        run: aws s3 cp ./dist/btc_final/browser s3://jesarrl-bucket --recursive
