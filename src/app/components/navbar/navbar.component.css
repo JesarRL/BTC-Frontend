@@ -170,6 +170,18 @@
     cursor: pointer;
 }
 
+.opcionesSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width:720px){
+    .opcionesSide{
+        height: 100%;
+    }
+}
+
 /** Side bar inicio de sesion **/
 
 .despliegue-usuario {
