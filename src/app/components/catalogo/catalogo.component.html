@@ -31,7 +31,7 @@
             <div class="d-flex flex-column">
                 <div class="w-100 elemento-filtro">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro">Combustible</span>
+                    <span class="elementos-filtro"> Combustible</span>
                     <div>
                         <select class="w-100 elemento-select" id="selectCombustible">
                             <option value="">Seleccione tipo de combustible</option>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="w-100 elemento-filtro">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro">Marca</span>
+                    <span class="elementos-filtro"> Marca</span>
                     <div>
                         <select class="w-100 elemento-select" id="selectMarca">
                             <option value="">Seleccione una marca</option>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="w-100 elemento-filtro">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro">Modelo</span>
+                    <span class="elementos-filtro"> Modelo</span>
                     <div>
                         <select class="w-100 elemento-select" id="selectModelo">
                             <option value="">Seleccione el modelo</option>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="w-100 elemento-filtro">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro">Cilindrada (c.c)</span>
+                    <span class="elementos-filtro"> Cilindrada (c.c)</span>
                     <div class="d-flex justify-content-between align-items-center elemento-select flex-wrap">
                         <span>Desde</span>
                         <input type="number" class="inputFiltro" id="minCilindrada" />
@@ -84,7 +84,7 @@
                 </div>
                 <div class="w-100 elemento-filtro elemento-filtro-precio">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro">Precio ($ USD)</span>
+                    <span class="elementos-filtro"> Precio ($ USD)</span>
                     <div class="d-flex justify-content-between align-items-center elemento-select flex-wrap">
                         <span>Desde</span>
                         <input type="number" class="inputFiltro" id="minPrecio" />
@@ -101,7 +101,7 @@
                 </div>
             </div>
         </div>
-        <div class="seccion-catalogo px-4">
+        <div class="seccion-catalogo px-2">
             <div class="contenedorImagenesCatalogo d-flex justify-content-evenly">
                 @for (item of catalogoFiltro; track item._id) {
                     <div class="card cartaCatalogoCompleto" data-bs-toggle="modal" [attr.data-bs-target]="'#modal-' + item._id">
@@ -121,11 +121,11 @@
                                     <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Best Trucks Colombia</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body modalCatalogo d-flex align-items-center">
-                                    <div>
+                                <div class="modal-body modalCatalogo align-items-center">
+                                    <div class="modalImagen">
                                         <img src="{{ item.imagen }}" />
                                     </div>
-                                    <div class="d-flex flex-column justify-content-between pt-1 ms-4">
+                                    <div class="d-flex flex-column justify-content-between pt-1 ms-4 modalCaracteristicas">
                                         <h2 class="text-white fs-1">{{ item.marca }} {{ item.modelo }}</h2>
                                         <p class="textoModal">
                                             <span class="fw-medium">Modelo:</span>
