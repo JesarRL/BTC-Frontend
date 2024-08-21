@@ -7,6 +7,23 @@
             <h2>Las mejores camionetas del mercado</h2>
         </div>
     </div>
+    <div class="filtroResponsive">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accordion Item #1</button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong>
+                        It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>
+                        , though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="contenido">
         <div class="filtro d-flex flex-column px-4">
             <span class="titulo-filtro text-center fw-medium">Filtros:</span>
@@ -14,7 +31,7 @@
             <div class="d-flex flex-column">
                 <div class="w-100 elemento-filtro">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro"> Combustible</span>
+                    <span class="elementos-filtro">Combustible</span>
                     <div>
                         <select class="w-100 elemento-select" id="selectCombustible">
                             <option value="">Seleccione tipo de combustible</option>
@@ -25,7 +42,7 @@
                 </div>
                 <div class="w-100 elemento-filtro">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro"> Marca</span>
+                    <span class="elementos-filtro">Marca</span>
                     <div>
                         <select class="w-100 elemento-select" id="selectMarca">
                             <option value="">Seleccione una marca</option>
@@ -44,7 +61,7 @@
                 </div>
                 <div class="w-100 elemento-filtro">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro"> Modelo</span>
+                    <span class="elementos-filtro">Modelo</span>
                     <div>
                         <select class="w-100 elemento-select" id="selectModelo">
                             <option value="">Seleccione el modelo</option>
@@ -56,8 +73,8 @@
                 </div>
                 <div class="w-100 elemento-filtro">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro"> Cilindrada (c.c)</span>
-                    <div class="d-flex justify-content-between align-items-center elemento-select">
+                    <span class="elementos-filtro">Cilindrada (c.c)</span>
+                    <div class="d-flex justify-content-between align-items-center elemento-select flex-wrap">
                         <span>Desde</span>
                         <input type="number" class="inputFiltro" id="minCilindrada" />
                         <span>-</span>
@@ -67,8 +84,8 @@
                 </div>
                 <div class="w-100 elemento-filtro elemento-filtro-precio">
                     <i class="fa-solid fa-caret-right"></i>
-                    <span class="elementos-filtro"> Precio ($ USD)</span>
-                    <div class="d-flex justify-content-between align-items-center elemento-select">
+                    <span class="elementos-filtro">Precio ($ USD)</span>
+                    <div class="d-flex justify-content-between align-items-center elemento-select flex-wrap">
                         <span>Desde</span>
                         <input type="number" class="inputFiltro" id="minPrecio" />
                         <span>-</span>
@@ -106,23 +123,47 @@
                                 </div>
                                 <div class="modal-body modalCatalogo d-flex align-items-center">
                                     <div>
-                                        <img src="{{ item.imagen }}">
+                                        <img src="{{ item.imagen }}" />
                                     </div>
                                     <div class="d-flex flex-column justify-content-between pt-1 ms-4">
                                         <h2 class="text-white fs-1">{{ item.marca }} {{ item.modelo }}</h2>
-                                        <p class="textoModal"><span class="fw-medium">Modelo:</span> {{ item.year }}</p>
-                                        <p class="textoModal"><span class="fw-medium">Combustible:</span> {{ item.combustible }}</p>
-                                        <p class="textoModal"><span class="fw-medium">Cilindrada:</span> {{ item.cilindrada }} c.c</p>
-                                        <p class="textoModal"><span class="fw-medium">Potencia - Torque:</span> {{ item.potencia }} hp - {{ item.torque }} Nm</p>
-                                        <p class="textoModal"><span class="fw-medium">Valvulas:</span> {{ item.valvulas }}</p>
-                                        <p class="textoModal"><span class="fw-medium">Consumo promedio:</span> {{ item.consumo_promedio }} L/100Km</p>
-                                        <p class="textoModal"><span class="fw-medium">Dimensiones:</span> {{ item.dimensiones }} (mm)</p>
-                                        <p class="textoModal"><span class="fw-medium">Precio:</span> {{ item.precio }}$ USD</p>
+                                        <p class="textoModal">
+                                            <span class="fw-medium">Modelo:</span>
+                                            {{ item.year }}
+                                        </p>
+                                        <p class="textoModal">
+                                            <span class="fw-medium">Combustible:</span>
+                                            {{ item.combustible }}
+                                        </p>
+                                        <p class="textoModal">
+                                            <span class="fw-medium">Cilindrada:</span>
+                                            {{ item.cilindrada }} c.c
+                                        </p>
+                                        <p class="textoModal">
+                                            <span class="fw-medium">Potencia - Torque:</span>
+                                            {{ item.potencia }} hp - {{ item.torque }} Nm
+                                        </p>
+                                        <p class="textoModal">
+                                            <span class="fw-medium">Valvulas:</span>
+                                            {{ item.valvulas }}
+                                        </p>
+                                        <p class="textoModal">
+                                            <span class="fw-medium">Consumo promedio:</span>
+                                            {{ item.consumo_promedio }} L/100Km
+                                        </p>
+                                        <p class="textoModal">
+                                            <span class="fw-medium">Dimensiones:</span>
+                                            {{ item.dimensiones }} (mm)
+                                        </p>
+                                        <p class="textoModal">
+                                            <span class="fw-medium">Precio:</span>
+                                            {{ item.precio }}$ USD
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="modal-footer justify-content-center">
                                     <button type="button" class="btn btn-warning fs-4" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary fs-4"  data-bs-dismiss="modal" routerLink="/contacto">Estoy interesado!</button>
+                                    <button type="button" class="btn btn-primary fs-4" data-bs-dismiss="modal" routerLink="/contacto">Estoy interesado!</button>
                                 </div>
                             </div>
                         </div>
