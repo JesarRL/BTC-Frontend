@@ -1,14 +1,28 @@
 
 /* Móvil pequeño (360x640) */
 @media (max-width: 360px) and (max-height: 640px) {
-    .container {
-        padding: 10px;
+    .seccion-cuestionario{
+width: 360px !important;
     }
-    .header {
-        font-size: 14px;
+
+    .seccion-cuestionario{
+        width: 360px !important;
+        display: flex;
+        flex-direction: column;
+
     }
-    .main-content {
-        font-size: 12px;
+    .formulario{
+        display: flex;
+        padding-left: 0px;
+        height: fit-content;
+        width: 300px;
+    }
+
+    .formulario input {
+        width: 320px;
+    }
+    .imagen_preguntanos{
+        display: none;
     }
 }
 
@@ -80,20 +94,15 @@
 
 /* Escritorio medio (1440x900) */
 @media (min-width: 1367px) and (max-width: 1440px) and (max-height: 900px) {
-    .container {
-        padding: 40px;
-    }
     .seccion-cuestionario{
-        width: 100%;
+        width: 1440px;
+            }
+    .imagenWsp{
+        margin-right: 100px;
     }
 
     }
-    .header {
-        font-size: 22px;
-    }
-    .main-content {
-        font-size: 20px;
-    }
+
 
 
 /* Escritorio grande (1920x1080) */
