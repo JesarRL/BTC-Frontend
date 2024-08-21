@@ -1,13 +1,24 @@
 
 /* Móvil pequeño (360x640) */
-@media (max-width: 360px) and (max-height: 640px) {
+@media (max-width: 414px) and (max-height: 896px) {
 
     body {
-        width: 360px !important;
+        width: 100%;
+    }
+
+    .carrusel {
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+    }
+
+    .carrusel img{
+        width: 100%;
+        height: 100%;
     }
 
     .seccion-cuestionario{
-        width: 360px;
+        width: 100%;
         margin-top: 20px;
     }
     .seccion-cuestionario img {
@@ -17,18 +28,27 @@
     .formulario{
         border-radius: 2%;
         background-color: var(--color-gris-claro);
-        width: 340px;
+        width: 100%;
         font-weight: lighter;
     }
 }
 
 /* Móvil medio (375x667) */
 @media (min-width: 361px) and (max-width: 375px) and (max-height: 667px) {
+    .seccion-cuestionario{
+        width: 100%;
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+    }
+
     .formulario {
         border-radius: 2%;
         background-color: var(--color-gris-claro);
-        width: 360px;
-        font-weight: 600;
+        width: auto;
+        font-weight: 400;
+
     }
     .seccion-cuestionario img {
         display: none;
@@ -39,7 +59,7 @@
 /* Móvil grande (720x1280) */
 @media (min-width: 376px) and (max-width: 720px) and (max-height: 1280px) {
     .seccion-cuestionario{
-        width: 720px;
+        width: 414px;
         display: flex;
         align-content: center;
         justify-content: center;
@@ -97,7 +117,7 @@
 /* Escritorio medio (1440x900) */
 @media (min-width: 1367px) and (max-width: 1440px) and (max-height: 900px) {
     .seccion-cuestionario{
-        width: 1440px;
+        width: 100%;
         margin-top: 100px;
         }
         .formulario {
@@ -117,7 +137,7 @@
 /* Escritorio grande (1920x1080) */
 @media (min-width: 1441px) and (max-width: 1920px) and (max-height: 1080px) {
     .seccion-cuestionario{
-        width: 1920px;
+        width: 100%;
         margin-top: 100px;
         display: flex;
         align-items: center;
@@ -132,7 +152,7 @@
         font-weight: 500;
     }
 .cuadro-grande{
-    width: 1920px;
+    width: 100%;
     margin-right: 200px;
     margin-left: 300;
     margin-top: 50px;
