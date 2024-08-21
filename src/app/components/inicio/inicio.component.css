@@ -1,4 +1,4 @@
-body{
+body {
     overflow-x: hidden;
 }
 
@@ -15,35 +15,34 @@ h3 {
     background-color: rgba(53, 53, 53, 0.8);
 }
 
-.imagen-carrusel{
-    width: 1519.2px;
-    height: 703px;
+.imagen-carrusel {
+    width: 100%; /* Ajusta al 100% del contenedor */
+    max-width: 1519.2px; /* Limita el tamaño máximo de la imagen en pantallas grandes */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    position: relative; /* Para que los botones se posicionen relativamente a la imagen */
+}
+
+.imagen-carrusel:hover{
+    cursor: pointer;
 }
 
 .carruselBoton {
     width: 8% !important;
 }
 
-.boton1 {
-    position: absolute;
-    top: 400px;
-    left: 130px;
-    width: 200px;
-    height: 65px;
+.arregloNav{
+    display: none;
 }
 
-.boton2{
-    position: absolute;
-    top: 445px;
-    left: 1127px;
-    width: 250px;
-    height: 65px;
-}
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .imagen-carrusel {
+        width: 100%;
+        height: auto;
+    }
 
-.boton3{
-    position: absolute;
-    top: 445px;
-    left: 155px;
-    width: 250px;
-    height: 65px;
+    .arregloNav{
+        display: block;
+    }
 }
