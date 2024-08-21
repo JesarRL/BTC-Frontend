@@ -1,6 +1,11 @@
 
 /* Móvil pequeño (360x640) */
 @media (max-width: 360px) and (max-height: 640px) {
+
+    body {
+        width: 360px !important;
+    }
+
     .seccion-cuestionario{
         width: 360px;
         margin-top: 20px;
