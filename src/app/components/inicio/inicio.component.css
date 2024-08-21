@@ -35,6 +35,14 @@ h3 {
     display: none;
 }
 
+.pc{
+    display: block;
+}
+
+.mobile{
+    display: none;
+}
+
 /* Ajustes responsivos */
 @media (max-width: 768px) {
     .imagen-carrusel {
@@ -45,4 +53,14 @@ h3 {
     .arregloNav{
         display: block;
     }
+
+    .pc{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
 }
+
+
