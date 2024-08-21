@@ -6,16 +6,6 @@
         width: 100%;
     }
 
-    .carrusel {
-        width: 100%;
-        height: 100%;
-        margin-top: 10px;
-    }
-
-    .carrusel img{
-        width: 100%;
-        height: 100%;
-    }
 
     .seccion-cuestionario{
         width: 100%;
@@ -28,7 +18,7 @@
     .formulario{
         border-radius: 2%;
         background-color: var(--color-gris-claro);
-        width: 100%;
+        width: fit-content;
         font-weight: lighter;
     }
 }
